@@ -1,0 +1,2155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 OKR 2025 — งานหลักที่รับผิดชอบ</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 3.5c.276 0 .5.224.5.5v7.5c0 .276-.224.5-.5.5s-.5-.224-.5-.5V4c0-.276.224-.5.5-.5zM7 8.5c.276 0 .5.224.5.5v6c0 .276-.224.5-.5.5s-.5-.224-.5-.5V9c0-.276.224-.5.5-.5zm5 3c.276 0 .5.224.5.5v3c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-3c0-.276.224-.5.5-.5zm5-2c.276 0 .5.224.5.5v5c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-5c0-.276.224-.5.5-.5z'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180' fill='%2310b981'%3E%3Crect width='180' height='180' fill='%23ffffff' rx='20'/%3E%3Cpath d='M90 20C49.24 20 20 49.24 20 90s29.24 70 70 70 70-29.24 70-70-29.24-70-70-70zm-3.75 26.25c2.07 0 3.75 1.68 3.75 3.75v56.25c0 2.07-1.68 3.75-3.75 3.75s-3.75-1.68-3.75-3.75V50c0-2.07 1.68-3.75 3.75-3.75zM52.5 63.75c2.07 0 3.75 1.68 3.75 3.75v45c0 2.07-1.68 3.75-3.75 3.75s-3.75-1.68-3.75-3.75v-45c0-2.07 1.68-3.75 3.75-3.75zm37.5 22.5c2.07 0 3.75 1.68 3.75 3.75v22.5c0 2.07-1.68 3.75-3.75 3.75s-3.75-1.68-3.75-3.75V90c0-2.07 1.68-3.75 3.75-3.75zm37.5-15c2.07 0 3.75 1.68 3.75 3.75v37.5c0 2.07-1.68 3.75-3.75 3.75s-3.75-1.68-3.75-3.75v-37.5c0-2.07 1.68-3.75 3.75-3.75z'/%3E%3C/svg%3E">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .dashboard-container {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            padding: 1.5rem;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            position: fixed;
+            height: 100vh;
+            z-index: 1000;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 1rem;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+
+        .sidebar-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .sidebar-nav {
+            margin-bottom: 2rem;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+            border-left-color: #6ee7b7;
+        }
+
+        .nav-item.active {
+            background: rgba(255,255,255,0.25);
+            border-left-color: #6ee7b7;
+        }
+
+        .sidebar-stats {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        .sidebar-stats h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .sidebar-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .main-header {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #10b981;
+        }
+
+        .main-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .main-header p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #10b981, #6ee7b7, #10b981);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+            border-color: #10b981;
+        }
+
+        .dashboard-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .card-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+        }
+
+        .card-header .progress-indicator {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 8px;
+            margin: 0 -0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .task-item:hover {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            transform: translateX(8px);
+            border-bottom-color: #10b981;
+        }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-item:hover .task-icon {
+            transform: scale(1.2);
+            color: #047857;
+        }
+
+        .task-icon {
+            color: #10b981;
+            margin-right: 0.75rem;
+            font-size: 1rem;
+            margin-top: 0.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .task-text {
+            flex: 1;
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Collapsible Task Styles */
+        .collapsible-item {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .task-header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            padding: 0.75rem 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .task-header:hover {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            transform: translateX(8px);
+        }
+
+        .task-header:hover .task-icon {
+            transform: scale(1.2);
+            color: #047857;
+        }
+
+        .task-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .toggle-arrow {
+            color: #10b981;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            margin-left: 1rem;
+        }
+
+        .toggle-arrow.expanded {
+            transform: rotate(180deg);
+        }
+
+        .task-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 2.5rem;
+            margin-top: 0;
+            opacity: 0;
+        }
+
+        .task-details.expanded {
+            max-height: 300px;
+            opacity: 1;
+            padding: 1rem 2.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .task-details p {
+            color: #6b7280;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #10b981;
+        }
+
+        /* Enhanced visual feedback */
+        .collapsible-item .task-header:active {
+            transform: translateX(4px) scale(0.98);
+        }
+
+        .collapsible-item:hover {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            transform: none;
+        }
+
+        .stats-grid {
+            display: flex;
+            align-items: stretch;
+            gap: 1rem;
+            margin: 2rem 0;
+            overflow-x: visible;
+            padding: 0.5rem 3.5rem;
+        }
+
+        .stats-grid .stat-card {
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+            white-space: nowrap;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background: #ecfdf5;
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 5px solid #10b981;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+            background: linear-gradient(135deg, #6ee7b7, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .subsection:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .subsection h3 {
+            color: #059669;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d1fae5;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .subsection ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .subsection li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .subsection li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #6ee7b7 0%, #d1fae5 100%);
+            color: #047857;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .stat-header {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .stat-content {
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Mobile Navigation Toggle */
+        .mobile-nav-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .mobile-nav-toggle:hover {
+            background: #047857;
+        }
+
+        @media (max-width: 1024px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+                backdrop-filter: blur(10px);
+                background: rgba(16, 185, 129, 0.9);
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                backdrop-filter: blur(20px);
+                background: rgba(16, 185, 129, 0.95);
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+                box-shadow: 4px 0 20px rgba(0,0,0,0.3);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 4rem 1rem 1rem 1rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .dashboard-card {
+                margin-bottom: 1rem;
+                border-radius: 16px;
+                box-shadow: 0 8px 32px rgba(16, 185, 129, 0.1);
+            }
+
+            .stats-grid {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .stats-grid .stat-card {
+                flex: 0 1 calc(50% - 0.375rem);
+                min-width: 160px;
+                max-width: 200px;
+            }
+
+            .main-header {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border-radius: 16px;
+            }
+
+            .main-header h1 {
+                font-size: 2rem;
+            }
+
+            .card-header {
+                padding: 1rem;
+            }
+
+            .card-content {
+                padding: 1rem;
+            }
+
+            .task-item {
+                padding: 0.5rem 0;
+            }
+
+            .task-text {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            /* Enhanced touch targets for mobile */
+            .nav-item {
+                padding: 1rem;
+                font-size: 1.1rem;
+                min-height: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .stats-grid .stat-card {
+                flex: none;
+                min-width: auto;
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 4rem 0.5rem 1rem 0.5rem;
+            }
+
+            .dashboard-grid {
+                gap: 0.75rem;
+            }
+
+            .main-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-header p {
+                font-size: 1.1rem;
+            }
+
+            .chart-summary {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin: 2px;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
+            border-radius: 4px;
+            animation: progressLoad 2s ease-out;
+        }
+
+        @keyframes progressLoad {
+            from { width: 0; }
+        }
+
+        .automation { --progress: 85%; }
+        .migrate { --progress: 95%; }
+        .support { --progress: 90%; }
+
+        .automation .progress-fill { width: 85%; }
+        .migrate .progress-fill { width: 95%; }
+        .support .progress-fill { width: 90%; }
+
+        /* Sprint Performance Styles */
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .perf-metric {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .perf-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .perf-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .sprint-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .sprint-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+
+        .sprint-name {
+            font-weight: bold;
+            color: #495057;
+            font-size: 1.1em;
+        }
+
+        .sprint-points {
+            background: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .sprint-rate.success {
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .sprint-rate.perfect {
+            background: #17a2b8;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .trend-info {
+            margin-top: 15px;
+        }
+
+        .streak-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .streak-number {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .streak-text {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .recent-sprints {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .recent-badge.perfect {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .recent-badge.perfect::after {
+            content: "✅";
+        }
+
+        /* Sprint Breakdown Table Styles */
+        .sprint-breakdown-container {
+            margin-top: 20px;
+        }
+
+        .breakdown-table-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .breakdown-table th,
+        .breakdown-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        .breakdown-table th {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .breakdown-table tbody tr {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .breakdown-table tbody tr:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+
+        .recent-sprint {
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            border-left: 4px solid #28a745;
+        }
+
+        .recent-sprint:hover {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+        }
+
+        .highlight-row {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 4px solid #fd79a8;
+        }
+
+        .highlight-row:hover {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+        }
+
+        .sprint-cell {
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 1em;
+        }
+
+        .points-cell,
+        .completed-cell {
+            font-weight: 600;
+            text-align: center;
+            color: #495057;
+        }
+
+        .rate-cell {
+            text-align: center;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+
+        .perfect-rate {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .good-rate {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .needs-improvement {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-cell {
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .perfect-status {
+            color: #28a745;
+        }
+
+        .good-status {
+            color: #ffc107;
+        }
+
+        .needs-improvement-status {
+            color: #dc3545;
+        }
+
+        .breakdown-summary {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+        }
+
+        .summary-stat {
+            background: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .summary-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .summary-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Chart Container Styles */
+        .chart-container {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #6ee7b7, #047857);
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 450px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .chart-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .chart-controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .chart-btn {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .chart-btn:hover::before {
+            left: 100%;
+        }
+
+        .chart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .chart-btn.active {
+            background: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
+            box-shadow: 0 6px 16px rgba(110, 231, 183, 0.4);
+        }
+
+        .chart-summary {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ecfdf5 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            color: #555;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);
+        }
+
+        /* Loading Animation */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .loading-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading-shimmer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Modern glassmorphism effect for sidebar */
+        .sidebar {
+            backdrop-filter: blur(20px);
+            background: rgba(16, 185, 129, 0.95);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Ticket and Detail Card Styles */
+        .task-ticket-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+        }
+
+        .ticket-id {
+            background: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .ticket-status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-in-progress {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-completed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-testing {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        /* Detail Card Modal */
+        .detail-card-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .detail-card-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .detail-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.7) translateY(50px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .detail-card-overlay.show .detail-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .detail-card-header {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .detail-card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>');
+            opacity: 0.3;
+        }
+
+        .detail-card-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .detail-card-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .detail-card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .detail-card-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 5;
+        }
+
+        .detail-card-content {
+            padding: 2rem;
+        }
+
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+
+        .detail-section h3 {
+            color: #10b981;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-section-icon {
+            font-size: 1.1rem;
+        }
+
+        .detail-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-info-item {
+            background: #f8fafb;
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+        }
+
+        .detail-info-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-info-value {
+            font-size: 1rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .detail-description {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+            line-height: 1.6;
+            color: #374151;
+        }
+
+        .detail-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .detail-tag {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Hover Effect for Task Items */
+        .task-item.has-detail-card {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .task-item.has-detail-card:hover {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            transform: translateX(8px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+        }
+
+        .task-item.has-detail-card:hover .task-icon {
+            transform: scale(1.3) rotate(10deg);
+            color: #047857;
+        }
+
+        .task-item.has-detail-card .task-header:hover .ticket-id {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Mobile responsiveness for breakdown table */
+        @media (max-width: 768px) {
+            .breakdown-table-container {
+                overflow-x: auto;
+            }
+
+            .breakdown-table {
+                min-width: 600px;
+            }
+
+            .breakdown-table th,
+            .breakdown-table td {
+                padding: 8px 10px;
+                font-size: 0.85em;
+            }
+
+            .breakdown-summary {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .summary-stat {
+                padding: 15px;
+            }
+
+            .summary-number {
+                font-size: 1.5em;
+            }
+
+            .chart-wrapper {
+                height: 300px;
+            }
+
+            .chart-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chart-btn {
+                width: 120px;
+            }
+
+            .detail-card {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .detail-card-header {
+                padding: 1.5rem;
+            }
+
+            .detail-card-content {
+                padding: 1.5rem;
+            }
+
+            .detail-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .task-ticket-info {
+                flex-direction: column;
+                gap: 0.25rem;
+                align-items: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-nav-toggle" onclick="toggleSidebar()">
+        <span>☰</span>
+    </button>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>🌟 Performance Review 2025</h1>
+                <p>Mr.Natthawut Suksai</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#automation" class="nav-item active" onclick="scrollToSection('automation')">
+                    🎯 งานทดสอบ
+                </a>
+                <a href="#migrate" class="nav-item" onclick="scrollToSection('migrate')">
+                    🔧 Migrate & Performance
+                </a>
+                <a href="#support" class="nav-item" onclick="scrollToSection('support')">
+                    🛠️ Support งาน
+                </a>
+                <a href="#investigate" class="nav-item" onclick="scrollToSection('investigate')">
+                    🔍 Investigation & Problem Solving
+                </a>
+                <a href="#stats" class="nav-item" onclick="scrollToSection('stats')">
+                    📊 สถิติรวม
+                </a>
+            </nav>
+
+            <div class="sidebar-stats">
+                <h3>📈 สรุปผลงาน</h3>
+                <div class="sidebar-stat">
+                    <span>เหรียญที่ Migrate:</span>
+                    <strong>164</strong>
+                </div>
+                <div class="sidebar-stat">
+                    <span>Test Results Migrated:</span>
+                    <strong>40K+</strong>
+                </div>
+                <div class="sidebar-stat">
+                    <span>Story Points:</span>
+                    <strong>380</strong>
+                </div>
+                <div class="sidebar-stat">
+                    <span>Sprint Rate:</span>
+                    <strong>85.1%</strong>
+                </div>
+                <div class="sidebar-stat">
+                    <span>Issues Investigated:</span>
+                    <strong>15+</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="main-header">
+                <h1>🎯 OKR 2025 Dashboard</h1>
+                <p>งานหลักที่รับผิดชอบ — สรุปผลงานครบถ้วนทุกด้าน จากการทดสอบระบบ การ migrate ข้อมูล การ support งานต่างๆ ไปจนถึงการ investigate และแก้ไขปัญหาต่างๆ</p>
+
+                <div class="chart-summary">
+                    <strong>📝 สรุปผลงานเด่น:</strong> ทำการทดสอบระบบครอบคลุม 6 หมวดหลัก (Match Consumer, E-Report, Private WebSocket, Pre-Archive, Key Set, Reconcile) ด้วย automation scripts,
+                    สำเร็จในการ migrate script และ deploy migrate <span class="highlight">164 เหรียญ</span>,
+                    migrate test cases และ test results จาก TestRail ไป X-ray รวม <span class="highlight">40,000+ ข้อ</span>,
+                    ให้การ support ทีม platform ในงาน database upgrades, EKS testing, DR site, และทำการ investigate & solve ปัญหาต่างๆ รวม <span class="highlight">15+ issues</span> ที่เกี่ยวข้องกับ production incidents, data discrepancies และ performance bottlenecks
+                </div>
+            </div>
+
+            <div class="dashboard-grid" id="automation">
+                <!-- Automation Testing Card -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>🎯 งานทดสอบทั้งหมด (Automation Test)</h2>
+                        <div class="progress-indicator">Progress: 85%</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔄</span>
+                                    <div class="task-title">
+                                        <strong>New Matching Engine</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>ทดสอบระบบ matching engine ด้วย automation script</li>
+                                        <li>ทดสอบระบบ matching engine ที่ใช้ symbol_id</li>
+                                        <li>ทดสอบระบบต่างๆ ที่เกี่ยวข้องกับ matching engine เช่น เส้น get Orders, matchV2, OrdersV2</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">📊</span>
+                                    <div class="task-title">
+                                        <strong>E-Report</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>ทดสอบระบบ E-reporting เรื่อง adjustments for SEC requirements ด้วย automation script</li>
+                                        <li>ทดสอบระบบ E-reporting เรื่อง support report broker ด้วย automation script</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔌</span>
+                                    <div class="task-title">
+                                        <strong>Private WebSocket Features</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>ทดสอบระบบ Order updates ด้วย automation script</li>
+                                        <li>ทดสอบระบบ Match updates ด้วย automation script</li>
+                                        <li>ทดสอบ Multi Subscribe</li>
+                                        <li>ทดสอบ Authentication</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">📦</span>
+                                    <div class="task-title">
+                                        <strong>Pre-Archive Features</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>ทดสอบเรื่อง pre-archive cron job</li>
+                                        <li>ทดสอบเรื่อง Pre-archive ของ public api ด้วย automation script</li>
+                                        <li>ทดสอบเรื่อง Pre-archive ของ microservice ด้วย automation script</li>
+                                        <li>ทดสอบเรื่อง Pre-archive ของ BFF mobile</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔑</span>
+                                    <div class="task-title">
+                                        <strong>Key Set Features</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>ทดสอบ Key Set ของเส้น Orders ด้วย automation script</li>
+                                        <li>ทดสอบ Key Set ของเส้น Match ด้วย automation script</li>
+                                        <li>ทดสอบ Key Set ของเส้น my-order-history ด้วย automation script</li>
+                                        <li>ทดสอบ Key Set ของเส้น Match ของ BFF-WEB ด้วย automation script</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔄</span>
+                                    <div class="task-title">
+                                        <strong>Reconcile Features</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>ทดสอบเรื่อง snapshot by THB ด้วย automation script</li>
+                                        <li>ทดสอบเรื่อง post migrate ending balance by THB</li>
+                                        <li>ทดสอบเรื่อง patch migrate ending balance by THB</li>
+                                        <li>ทดสอบเรื่อง multi currency snapshot</li>
+                                        <li>ทดสอบ re cal reconcile</li>
+                                        <li>ทดสอบเรื่อง get by Currency ending balance ด้วย automation script</li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Migration & Performance Card -->
+                <div class="dashboard-card" id="migrate">
+                    <div class="card-header">
+                        <h2>🔧 งาน Migrate และ Performance</h2>
+                        <div class="progress-indicator">Progress: 95%</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">📋</span>
+                                    <div class="task-title">
+                                        <strong>Migrate Script</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>Design Flow Migrate Open & Match_Orders</li>
+                                        <li>ทดสอบ script migrate match</li>
+                                        <li>Capacity test script match_orders</li>
+                                        <li>Support Deploy migrate ปีนี้ทำการ migrate ไปแล้ว <span class="highlight">164 เหรียญ</span></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔄</span>
+                                    <div class="task-title">
+                                        <strong>Support Migrate Testrail to X-ray</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>Support migrate test case ไปยัง x-ray โดยสร้าง folder ทั้งหมดที่ test rail มี</li>
+                                        <li>Migrate test result ประมาณ <span class="highlight">4 หมื่นข้อ</span></li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Support Work Card -->
+                <div class="dashboard-card" id="support">
+                    <div class="card-header">
+                        <h2>🛠️ Support งานต่างๆ</h2>
+                        <div class="progress-indicator">Progress: 90%</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🗄️</span>
+                                    <div class="task-title">
+                                        <strong>Database Upgrades</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>Support ให้ทีม platform เรื่อง Database Upgrades: MongoDB v6 to v8</li>
+                                        <li>Support ให้ทีม platform เรื่อง Database Upgrades: MySQL Aurora upgrades</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">☁️</span>
+                                    <div class="task-title">
+                                        <strong>EKS Testing Support</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>Support test old house EKS-nonprd because platform team Change image ALlinux 2 to bottle rocket</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔄</span>
+                                    <div class="task-title">
+                                        <strong>DR Site Support</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>Support DR Site Support: Disaster recovery site implementations</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔍</span>
+                                    <div class="task-title">
+                                        <strong>Incident Support</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <ol>
+                                        <li>Support incident ต่างๆ เช่น TMC เรื่อง wash trade แล้ว user ไม่ได้เงิน ช่วยเดฟ reproduce step หรือ diff ต่างๆ ที่ช่วยเดฟหาและ investigate</li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Investigation & Problem Solving Card -->
+                <div class="dashboard-card" id="investigate">
+                    <div class="card-header">
+                        <h2>🔍 Investigation & Problem Solving</h2>
+                        <div class="progress-indicator">Progress: 95%</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🐛</span>
+                                    <div class="task-title">
+                                        <strong>Production Issues Investigation</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <p>สืบสวนและแก้ไขปัญหา production incidents เช่น TMC wash trade ที่ user ไม่ได้เงิน, การ reproduce steps, วิเคราะห์ data differences และช่วยเดฟ investigate root cause ของปัญหาต่างๆ</p>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">⚡</span>
+                                    <div class="task-title">
+                                        <strong>Performance Bottleneck Investigation</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <p>วิเคราะห์ performance issues ในระบบ trading, หา bottleneck ใน API endpoints, database queries และ system resources เพื่อปรับปรุงประสิทธิภาพ</p>
+                                </div>
+                            </li>
+                            <li class="task-item collapsible-item">
+                                <div class="task-header" onclick="toggleTaskDetails(this)">
+                                    <span class="task-icon">🔄</span>
+                                    <div class="task-title">
+                                        <strong>System Integration Issues</strong>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                </div>
+                                <div class="task-details">
+                                    <p>สืบสวนปัญหาการเชื่อมต่อระหว่างระบบต่างๆ, API integration failures, microservice communication issues, และ third-party service integrations</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- Section 4: Sprint Performance & Story Points -->
+
+
+            <!-- Statistics Grid -->
+            <div class="stats-grid" id="stats">
+                <div class="stat-card">
+                    <div class="stat-header">เหรียญที่ Migrate</div>
+                    <div class="stat-content">
+                        <div class="stat-number">164</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">Test Results Migrated</div>
+                    <div class="stat-content">
+                        <div class="stat-number">40K+</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">Total Story Points</div>
+                    <div class="stat-content">
+                        <div class="stat-number">380</div>
+                    </div>
+                </div>
+ 
+                <div class="stat-card">
+                    <div class="stat-header">หมวดงานหลัก</div>
+                    <div class="stat-content">
+                        <div class="stat-number">5</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">Issues Investigated</div>
+                    <div class="stat-content">
+                        <div class="stat-number">15+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            📈 OKR 2025 Summary ?>
+        </div>
+    </div>
+
+    <script>
+        // Task Collapsible Functionality
+        function toggleTaskDetails(headerElement) {
+            const taskItem = headerElement.closest('.task-item');
+            const taskDetails = taskItem.querySelector('.task-details');
+            const toggleArrow = headerElement.querySelector('.toggle-arrow');
+
+            // Toggle the expanded state
+            taskDetails.classList.toggle('expanded');
+            toggleArrow.classList.toggle('expanded');
+
+            // Add a slight bounce effect to the icon
+            const taskIcon = headerElement.querySelector('.task-icon');
+            taskIcon.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                taskIcon.style.transform = 'scale(1.2)';
+            }, 150);
+        }
+
+        // Dashboard Navigation Functions
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                // Update active nav item
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                event.target.classList.add('active');
+
+                // Close mobile sidebar
+                if (window.innerWidth <= 768) {
+                    document.getElementById('sidebar').classList.remove('open');
+                }
+            }
+        }
+
+        // Dashboard initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add card hover effects
+            const cards = document.querySelectorAll('.dashboard-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-6px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-4px)';
+                });
+            });
+
+            // Add stat card animations
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Intersection Observer for section highlighting
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('[id]');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navItems.forEach(item => {
+                            item.classList.remove('active');
+                            if (item.getAttribute('href') === `#${id}`) {
+                                item.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.7
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Update footer with current date/time
+        document.addEventListener('DOMContentLoaded', function() {
+            const footer = document.querySelector('.footer');
+            const now = new Date();
+            const thaiDate = now.toLocaleDateString('th-TH', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            footer.innerHTML = `📈 OKR 2025 Summary`;
+        });
+
+        // Sprint Chart Functionality
+        const sprintData = {
+            labels: [
+                'TC25-02', 'TC25-03', 'TC25-04', 'TC25-05', 'TC25-06', 'TC25-07', 'TC25-08', 'TC25-09', 'TC25-10',
+                'TC25-11', 'TC25-12', 'TC25-13', 'TC25-14', 'TC25-15', 'TC25-16', 'TC25-17', 'TC25-18', 'TC25-19',
+                'TC25-20', 'TC25-21', 'TC25-22', 'TC25-23', 'TC25-24', 'TC25-25', 'TC25-26', 'TC26-01'
+            ],
+            values: [
+                5.0, 3.0, 7.25, 6.5, 7.25, 7.0, 3.0, 7.0, 14.0,
+                40.0, 8.0, 17.0, 5.0, 36.0, 18.0, 20.0, 14.0, 16.0,
+                2.0, 36.0, 27.0, 32.0, 21.0, 32.0, 16.0, 2.0
+            ]
+        };
+
+        let sprintChart = null;
+        let currentChartType = 'bar';
+
+        // Color scheme
+        const chartColors = {
+            primary: 'rgba(16, 185, 129, 0.8)',
+            primaryBorder: 'rgba(16, 185, 129, 1)',
+            gradient: null
+        };
+
+        function createGradient(ctx) {
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(16, 185, 129, 0.8)');
+            gradient.addColorStop(1, 'rgba(16, 185, 129, 0.1)');
+            return gradient;
+        }
+
+        function initSprintChart() {
+            const canvas = document.getElementById('sprintChart');
+            if (!canvas) return; // Exit if canvas doesn't exist
+
+            const ctx = canvas.getContext('2d');
+            chartColors.gradient = createGradient(ctx);
+
+            sprintChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sprintData.labels,
+                    datasets: [{
+                        label: 'Story Points',
+                        data: sprintData.values,
+                        backgroundColor: chartColors.primary,
+                        borderColor: chartColors.primaryBorder,
+                        borderWidth: 2,
+                        borderRadius: 5,
+                        borderSkipped: false,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Story Points per Sprint - 2025 Performance',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            color: '#2c3e50'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: 'white',
+                            bodyColor: 'white',
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y + ' points';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Story Points',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#495057'
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            ticks: {
+                                color: '#666'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Sprint',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#495057'
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                color: '#666',
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        }
+
+        function changeChartType(type, buttonElement) {
+            // Update active button
+            document.querySelectorAll('.chart-btn').forEach(btn => btn.classList.remove('active'));
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+
+            if (sprintChart) {
+                sprintChart.destroy();
+            }
+
+            const canvas = document.getElementById('sprintChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+
+            let config = {
+                type: type,
+                data: {
+                    labels: sprintData.labels,
+                    datasets: [{
+                        label: 'Story Points',
+                        data: sprintData.values,
+                        backgroundColor: type === 'line' ? 'rgba(16, 185, 129, 0.1)' : chartColors.primary,
+                        borderColor: chartColors.primaryBorder,
+                        borderWidth: 2,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Story Points per Sprint - 2025 Performance',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            color: '#2c3e50'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: 'white',
+                            bodyColor: 'white',
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y + ' points';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Story Points',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#495057'
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            ticks: {
+                                color: '#666'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Sprint',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#495057'
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                color: '#666',
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            };
+
+            // Special configuration for area chart
+            if (type === 'area') {
+                config.type = 'line';
+                config.data.datasets[0].fill = true;
+                config.data.datasets[0].backgroundColor = chartColors.gradient || 'rgba(16, 185, 129, 0.3)';
+            }
+
+            // Special configuration for bar chart
+            if (type === 'bar') {
+                config.data.datasets[0].borderRadius = 5;
+                config.data.datasets[0].borderSkipped = false;
+            }
+
+            // Special configuration for line chart
+            if (type === 'line') {
+                config.data.datasets[0].pointBackgroundColor = chartColors.primaryBorder;
+                config.data.datasets[0].pointBorderColor = 'white';
+                config.data.datasets[0].pointBorderWidth = 2;
+                config.data.datasets[0].pointRadius = 5;
+                config.data.datasets[0].pointHoverRadius = 8;
+            }
+
+            sprintChart = new Chart(ctx, config);
+            currentChartType = type;
+        }
+
+        // Initialize chart when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Delay chart initialization to ensure all DOM elements are loaded
+            setTimeout(initSprintChart, 500);
+        });
+
+        // Add responsive behavior
+        window.addEventListener('resize', function() {
+            if (sprintChart) {
+                sprintChart.resize();
+            }
+        });
+    </script>
+</body>
+</html>
